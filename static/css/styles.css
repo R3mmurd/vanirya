@@ -365,3 +365,7 @@ body {
      color: var(--secondary-background-color);
      font-weight: bolder;
 }
+
+.letter-read {
+     color: white;
+}
