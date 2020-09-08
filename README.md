@@ -29,6 +29,7 @@ In order to install and run this project, you should follow the next steps:
 
 In this package, it is provided a little database with some values. If you want to use it, go to step 9. Otherwise,
 remove the file db.sqlite3 and continue step 5.
+
 6. Migrate models: `python manage.py migrate`.
 7. Create a superuser: `python manage.py createsuperuser`.
 8. Log in in the admin system (`/admin/`) and create definitions for: genders, races, vocations, character images for each triplet
