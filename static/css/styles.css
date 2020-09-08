@@ -1,0 +1,367 @@
+:root {
+     --beige: rgb(232, 202, 147);
+     --beige-7: rgba(232, 202, 147, 0.7);
+     --secondary-background-color: rgb(247, 237, 107);
+     --secondary-background-color-7: rgba(247, 237, 107, 0.7);
+     --content-background-color: rgb(86, 92, 46);
+     --content-background-color-7: rgba(86, 92, 46, 0.7);
+     --strong-green: rgb(40, 43, 22);
+}
+
+body {
+     height:100%;
+     width:100%;
+     margin: 0;
+     background: var(--beige);
+     font-family: 'Rye', cursive;
+}
+
+.error {
+     color: red;
+     font-size: 0.8em;
+     text-align: center;
+     margin-top: -10px;
+     margin-bottom: 10px;
+}
+
+.btn-game {
+     background-image: url('/static/images/frame.png');
+     /* width: 150px; */
+     color: white;
+}
+
+.box {
+     min-height: 100vh;
+     display: flex;
+     flex-flow: column;
+}
+
+#main-screen {
+     /* "https://wallpapersafari.com/free-castle-wallpaper/" */
+     background: url('/static/images/login-background.jpg') no-repeat center center fixed; 
+}
+
+#main-screen h1{
+     margin: 20px auto 0 auto;
+     font-family: 'Rye', cursive;
+     font-size: 8em;
+}
+
+.form-box {
+     margin: 150px auto auto auto;
+     padding: 50px 50px 20px 50px;
+     width: 400px;
+     background: var(--beige-7);
+}
+
+.form-box h5 {
+     margin-top: -20px;
+     margin-bottom: 20px;
+     text-align: center;
+}
+
+.form-submit-container {
+     width: 150px;
+     margin: auto;
+}
+
+.form-link-container {
+     margin-top: 10px;
+     text-align: center;
+     font-weight: bold;
+}
+
+.form-link-container a {
+     color: black;
+}
+
+.menubar {
+     background: var(--secondary-background-color);
+     font-size: 1.5em;
+}
+
+.menubar a, .menubar a:hover {
+     color: var(--strong-green);
+}
+
+.navbar-brand, .navbar-brand:hover {
+     color: var(--strong-green);
+     font-size: 1.5em;
+}
+
+
+#index-screen {
+     /* https://wallpaperaccess.com/nordic-hd */
+     background: url('/static/images/main-background.jpg') repeat-y center center fixed; 
+}
+
+#index-content-container {
+     margin: auto;
+     background: var(--content-background-color-7);
+     width: 60%;
+     /* height: 60%; */
+     padding: 50px;
+}
+
+#table-profile {
+     width: 60%;
+     margin: auto;
+     color: white;
+}
+
+#table-profile td {
+     text-align: right;
+}
+
+#create-character-container {
+     display: flex;
+     flex-flow: row;
+}
+
+#max-characters-container {
+     display: flex;
+     flex-flow: column;
+}
+
+#max-characters-container h3 {
+     margin: auto;
+     color: white;
+}
+
+#max-characters-container a {
+     margin-top: 100px;
+     color: white;
+}
+
+#character-image-container {
+     padding: 20px;
+     text-align: center;
+     width: 100%;
+}
+
+#character-image-container img {
+     max-height: 300px;
+}
+
+#character-form-container {
+     width: 100%;
+     /* padding: 50px 100px 50px 100px; */
+}
+
+.index-content-title {
+     text-align: center;
+     color: white;
+}
+
+#character-form-container input, select {
+     color: white !important;
+     background: var(--strong-green) !important;
+     padding: 20px;
+}
+
+#character-form-container input::placeholder {
+     color: gray;
+}
+
+.index-button-container {
+     margin-top: 20px;
+     text-align: center;
+}
+
+.table-green {
+     color: white !important;
+     background: rgb(40, 43, 22) !important;
+     width: 60%;
+     text-align: center;
+     margin: auto;
+}
+
+.game-box {
+     display: flex;
+     min-height: 100vh;
+     
+}
+
+.game-box .table-green {
+     width: 80%;
+}
+
+.game-panel {
+     flex: 4;
+     background: url('/static/images/game-background.jpg') no-repeat center center fixed; 
+}
+
+.game-header {
+     display: flex;
+     flex-flow: row;
+     flex: 1;
+     justify-content: flex-start;
+     background: var(--secondary-background-color-7);
+     padding: 100px 50px 10px 50px;
+}
+
+#action-exit-container {
+     justify-self: flex-end;
+     text-align: right;
+     flex: 1 1;
+}
+
+.game-action {
+     margin-left: 10px;
+}
+
+#game-content {
+     padding: 50px 200px;
+     text-align: center;
+}
+
+#game-content-panel {
+     background: var(--content-background-color-7);
+     color: white;
+     padding: 20px 20px 30px 20px;
+}
+
+#game-content-panel table .btn-game {
+     margin-top: -15px;
+}
+
+.game-content-panel-title {
+     padding: 10px;
+}
+
+.character-panel {
+     flex: 1;
+     background: url('/static/images/gray-texture.jpg');
+     color: white;
+     text-align: center;
+     padding: 40px 20px 0px 20px;
+}
+
+.bar-title {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: smaller;
+     font-weight: bold;
+     margin-bottom: 0;
+}
+
+.bar-container {
+     display: flex;
+     justify-items: center;
+}
+
+.bar-container img {
+     margin-bottom: 10px;
+     padding: 1px;
+}
+
+.bar-background {
+     flex: 1;
+     background: #222;
+     margin-bottom: 10px;
+     margin-left: 5px;
+     border: 1px solid lightgray;
+     height:20px;
+}
+
+.bar-internal {
+     height: 18px;
+}
+
+#character-name {
+     font-size: 2em;
+     padding: 20px;
+}
+
+#life-bar {
+     background: red;
+}
+
+#mana-bar {
+     background: #323268;
+}
+
+#experience-bar {
+     background: var(--content-background-color);
+}
+
+#skills-table {
+     margin: 10px 10px 30px 10px;
+     color: white;
+     font-size: 1.5em;
+}
+
+#skills-table th {
+     text-align: left;
+     padding-left: 40px;
+}
+
+#skills-table td {
+     text-align: right;
+     padding-right: 80px;
+}
+
+#money-container {
+     padding: 15px;
+     font-size: 2em;
+}
+
+#money-container img {
+     margin-top: -20px;
+     margin-right: 15px;
+}
+
+#money {
+     width: 100px;
+     text-align: right;
+     display: inline-block;
+}
+
+.pagination {
+     margin-top: 10px;
+}
+
+.pagination .page-link:hover {
+     color: #222;
+}
+
+.pagination .page-number {
+     width: 40px;
+}
+
+#modal {
+     background-color: var(--content-background-color-7);
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: table;
+   }
+   
+#modal.hidden {
+     display: none;
+}
+   
+#modal-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+   
+#modal-body {
+     padding: 50px;
+     width: 600px;
+     margin: auto;
+     margin-bottom: 10px;
+     background: var(--strong-green);
+     color: white;
+}
+
+#modal-body h3{
+     margin-bottom: 20px;
+}
+
+.letter-unread {
+     color: var(--secondary-background-color);
+     font-weight: bolder;
+}

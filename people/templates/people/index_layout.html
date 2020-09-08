@@ -1,0 +1,36 @@
+{% extends 'people/layout.html' %}
+
+{% block body %}
+    <div class="box" id="index-screen"> 
+        <div class="menubar">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light menu justify-content-between" role="navigation">
+                    <a class="navbar-brand" href="javascript:void(0)">Vanirya</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse  navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'index' %}">Characters</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                            </li>
+                        </ul>
+                        <a class="nav-item nav-link mr-sm-2" href="{% url 'logout' %}">Logout</a>
+                    </div>
+    
+                    
+                    
+                </nav>
+            </div>
+            
+        </div>
+        <div id="index-content-container">
+            {% block index_content %}
+            {% endblock %}
+        </div>
+    </div>
+    
+{% endblock %}  

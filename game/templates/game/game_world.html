@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vanirya</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+          
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Rye&display=swap" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+    <!-- https://forums.rpgmakerweb.com/index.php?members/vanir.131225/ -->
+    <link href="{% static 'images/favicon.png' %}" rel="icon">
+
+    <script>
+        var characterId = {{ character.id }};
+    </script>
+    <script src="{% static 'js/game.js' %}"></script>
+</head>
+    <body>
+        <!-- Container for the whole game screen -->
+        <div class="game-box">
+            
+            <!-- Left panel of the game with world information -->
+            <div class="game-panel">
+
+                <!-- Header panel with action buttons -->
+                <div class="game-header">
+                    <div class="game-action">
+                        <a href="javascript:void(0)" class="btn btn-game" id="btn-creatures">Creatures</a>
+                    </div>
+                    <div class="game-action">
+                        <a href="javascript:void(0)" class="btn btn-game" id="btn-characters">Characters</a>
+                    </div>
+                    <div class="game-action">
+                        <a href="javascript:void(0)" class="btn btn-game" id="btn-spells">Spells</a>
+                    </div>
+                    <div class="game-action">
+                        <a href="javascript:void(0)" class="btn btn-game" id="btn-letters">Letters <span id="unread-letters-counter"></span></a>
+                    </div>
+                    <div class="game-action" id='action-exit-container'>
+                        <a href="{% url 'exit_game' %} " class="btn btn-game">Exit</a>
+                    </div>
+                </div>
+
+                <!-- Container of the game world content -->
+                <div id="game-content">
+                    <div id="game-content-panel"></div>
+                </div>
+
+            </div>
+
+            <!-- Right panel of the game with character information -->
+            <div class="character-panel">
+                <div id="character-name">{{ character.name }}</div>
+                <p class="bar-title">HP <span id="life">{{ character.current_life }}/{{ character.life }}</span></p>
+                <div class="bar-container">
+                    <div>
+                        <img src="{% static 'images/hp.png' %}" height="20" width="20">
+                    </div>
+                    <div class="bar-background">
+                        <div class="bar-internal" id="life-bar"></div>
+                    </div>                 
+                </div>
+                
+                <p class="bar-title">Mana <span id="mana">{{ character.current_mana }}/{{ character.mana }}</span></p>
+                <div class="bar-container">
+                    <div>
+                        <img src="{% static 'images/mana.png' %}" height="20" width="20">
+                    </div>
+                    <div class="bar-background">
+                        <div class="bar-internal" id="mana-bar"></div>
+                    </div>
+                </div>
+                
+                <p class="bar-title">Exp <span id="experience">{{ character.experience }}/{{ character.experience_to_next_level }}</span></p>
+                <div class="bar-container">
+                    <div>
+                        <img src="{% static 'images/exp.png' %}" height="20" width="20">
+                    </div>
+                    <div class="bar-background">
+                        <div class="bar-internal" id="experience-bar"></div>
+                    </div>
+                </div>
+
+                <div id="money-container">
+                    <img src="{% static 'images/coins.png' %}" width="40" height="40"> x <span id="money">{{ character.money }}</span>
+                </div>
+
+                <table id="skills-table" class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Level:</th>
+                            <td id="level">{{ character.level }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Magic Level:</th>
+                            <td id="magic-level">{{ character.magic_level }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Attack:</th>
+                            <td id="attack">{{ character.attack_level }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Defense:</th>
+                            <td id="defense">{{ character.defense_level }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img src="{{ image }}" height="280px" width="auto">
+            </div>
+        </div>
+        <div id="modal" class="hidden">
+            <div id="modal-container">
+
+                <div id="modal-body">
+                    
+                </div>
+                <div id="modal-footer">
+                    
+                </div>
+          </div>
+        </div>
+    </body>
+</html>

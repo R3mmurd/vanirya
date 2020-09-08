@@ -1,0 +1,33 @@
+{% extends 'people/index_layout.html' %}
+
+{% block title %}
+    Characters
+{% endblock %}
+
+{% block index_content %}
+    {% if characters %}
+        <h3 class="index-content-title">Character list</h3>
+        <div class="table-responsive">
+            <table class="table table-green table-borderless">
+                <tbody>
+                    {% for character in characters %}
+                        <tr>
+                            <td>{{ character.name}}</td>
+                            <td>
+                                <a class="btn btn-game" href="{% url 'view_character' pk=character.id %}">View</a>
+                                <a class="btn btn-game" href="{% url 'play_game' character_pk=character.id %}">Play</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <h3 class="index-content-title">You don't have any characters yet.</h3>
+    {% endif %}
+    {% if characters|length < 5 %}
+        <div class="index-button-container">
+            <a class="btn btn-game" href="{% url 'new_character' %}">New character</a>
+        </div>
+    {% endif %}
+{% endblock %}
