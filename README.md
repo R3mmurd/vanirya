@@ -49,7 +49,7 @@ In this project, there is a small database (`db.sqlite3`) with some basic defini
 - Character images: Some downloaded pictures to represent each triplet of gender, race, and vocation.
 - Users: An admin with username "vaniryaadm" and password "vaniryaadm". It also contains some randomly generated users.
   You can see their values in the admin system. All of them have "12345" as password.
-- Characters: ontains some randomly generated characters. You can see their values in the admin system.
+- Characters: Contains some randomly generated characters. You can see their values in the admin system.
 - Creatures: Goblin, Wolf, And Minotaur.
 - Creature instances: Contains a randomly generated spawn of creatures.
 - Spells: Potions for recovering life and mana. For each of them, there are three versions: weak, medium, and strong.
