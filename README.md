@@ -34,7 +34,7 @@ remove the file db.sqlite3 and continue step 5.
 7. Create a superuser: `python manage.py createsuperuser`.
 8. Log in in the admin system (`/admin/`) and create definitions for: genders, races, vocations, character images for each triplet
    (gender, race, vocation), and creatures.
-9. Populate the database. There is a script that populates thedatabase with some random users and character. It also generates a random
+9. Populate the database. There is a script that populates the database with some random users and character. It also generates a random
     spawn of creatures. Run the script: `python manage.py runscript populate`.
 10. Run the server: `python manage.py runserver`.
 11. Enjoy the game.
